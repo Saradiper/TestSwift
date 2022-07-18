@@ -7,18 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56AF726D2884A81E00DFC7CA /* loadImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF726C2884A81E00DFC7CA /* loadImageView.swift */; };
 		56FF08442881CEBF0079F1FF /* MagicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF08432881CEBF0079F1FF /* MagicApp.swift */; };
 		56FF08462881CEBF0079F1FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF08452881CEBF0079F1FF /* ContentView.swift */; };
 		56FF08482881CEC00079F1FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56FF08472881CEC00079F1FF /* Assets.xcassets */; };
 		56FF084B2881CEC00079F1FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56FF084A2881CEC00079F1FF /* Preview Assets.xcassets */; };
+		56FF08552881CFF20079F1FF /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF08542881CFF20079F1FF /* CardsView.swift */; };
+		56FF08572881D0170079F1FF /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF08562881D0170079F1FF /* CardDetailView.swift */; };
+		56FF08592881D0490079F1FF /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF08582881D0490079F1FF /* Networking.swift */; };
+		56FF085B2881D06C0079F1FF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF085A2881D06C0079F1FF /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56AF726B288369CF00DFC7CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		56AF726C2884A81E00DFC7CA /* loadImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loadImageView.swift; sourceTree = "<group>"; };
 		56FF08402881CEBF0079F1FF /* Magic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56FF08432881CEBF0079F1FF /* MagicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicApp.swift; sourceTree = "<group>"; };
 		56FF08452881CEBF0079F1FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		56FF08472881CEC00079F1FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56FF084A2881CEC00079F1FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		56FF08542881CFF20079F1FF /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
+		56FF08562881D0170079F1FF /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
+		56FF08582881D0490079F1FF /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		56FF085A2881D06C0079F1FF /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +62,11 @@
 		56FF08422881CEBF0079F1FF /* Magic */ = {
 			isa = PBXGroup;
 			children = (
+				56AF726B288369CF00DFC7CA /* Info.plist */,
 				56FF08432881CEBF0079F1FF /* MagicApp.swift */,
-				56FF08452881CEBF0079F1FF /* ContentView.swift */,
+				56FF08512881CFB80079F1FF /* View */,
+				56FF08522881CFBF0079F1FF /* ViewModel */,
+				56FF08532881CFCB0079F1FF /* Model */,
 				56FF08472881CEC00079F1FF /* Assets.xcassets */,
 				56FF08492881CEC00079F1FF /* Preview Content */,
 			);
@@ -65,6 +79,33 @@
 				56FF084A2881CEC00079F1FF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		56FF08512881CFB80079F1FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				56FF08452881CEBF0079F1FF /* ContentView.swift */,
+				56FF08542881CFF20079F1FF /* CardsView.swift */,
+				56FF08562881D0170079F1FF /* CardDetailView.swift */,
+				56AF726C2884A81E00DFC7CA /* loadImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		56FF08522881CFBF0079F1FF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				56FF08582881D0490079F1FF /* Networking.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		56FF08532881CFCB0079F1FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56FF085A2881D06C0079F1FF /* Card.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +178,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56FF08552881CFF20079F1FF /* CardsView.swift in Sources */,
+				56FF085B2881D06C0079F1FF /* Card.swift in Sources */,
+				56FF08592881D0490079F1FF /* Networking.swift in Sources */,
 				56FF08462881CEBF0079F1FF /* ContentView.swift in Sources */,
 				56FF08442881CEBF0079F1FF /* MagicApp.swift in Sources */,
+				56FF08572881D0170079F1FF /* CardDetailView.swift in Sources */,
+				56AF726D2884A81E00DFC7CA /* loadImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +316,7 @@
 				DEVELOPMENT_TEAM = ULLP49T4HG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Magic/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +346,7 @@
 				DEVELOPMENT_TEAM = ULLP49T4HG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Magic/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
