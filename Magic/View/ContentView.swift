@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     let candidateName = "Sara Díaz Pérez"
     let candidateEmail = "sdiazper.arq@gmail.com"
-    let dateTest = "15 de Julio 2022"
+    let testDate = "15 de Julio 2022"
     
     var body: some View {
         NavigationView {
@@ -28,7 +28,7 @@ struct ContentView: View {
                 
                 VStack(spacing: 8) {
                     Text("Email: \(candidateEmail)")
-                    Text("Fecha prueba: \(dateTest)")
+                    Text("Fecha prueba: \(testDate)")
                 }
                 Spacer()
             }

@@ -11,6 +11,7 @@ struct CardDetailView: View {
     let card: CachedCard
     
     var body: some View {
+        VStack {
         VStack(spacing: 16) {
             loadImageView(card: card)
             
@@ -23,10 +24,11 @@ struct CardDetailView: View {
             Text("Text: \(card.wrappedText)")
         }
     }
+    }
 }
 
-//struct CardDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CardDetailView()
-//    }
-//}
+struct CardDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        CardDetailView(card: CachedCard())
+    }
+}

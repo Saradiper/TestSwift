@@ -28,8 +28,8 @@ struct loadImageView: View {
     }
 }
 
-//struct loadImageView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        loadImageView()
-//    }
-//}
+struct loadImageView_Previews: PreviewProvider {
+    static var previews: some View {
+        loadImageView(card: CachedCard())
+    }
+}
