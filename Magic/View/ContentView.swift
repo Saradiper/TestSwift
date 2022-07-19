@@ -16,14 +16,14 @@ struct ContentView: View {
         NavigationView {
             VStack(spacing: 36) {
                 VStack {
-                Image("Photo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 200)
-                    .clipShape(Circle())
-                
-                Text("\(candidateName)")
-                    .font(.title)
+                    Image("Photo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200)
+                        .clipShape(Circle())
+                    
+                    Text("\(candidateName)")
+                        .font(.title)
                 }
                 
                 VStack(spacing: 8) {

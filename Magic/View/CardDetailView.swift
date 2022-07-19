@@ -11,7 +11,6 @@ struct CardDetailView: View {
     let card: CachedCard
     
     var body: some View {
-        VStack {
         VStack(spacing: 16) {
             loadImageView(card: card)
             
@@ -23,7 +22,6 @@ struct CardDetailView: View {
             Text("Type: \(card.wrappedType)")
             Text("Text: \(card.wrappedText)")
         }
-    }
     }
 }
 
