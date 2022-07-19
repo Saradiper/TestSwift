@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CardDetailView: View {
-    let card: Card
+    let card: CachedCard
     
     var body: some View {
         VStack(spacing: 16) {

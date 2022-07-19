@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    let name = "Sara Díaz Pérez"
-    let email = "sdiazper.arq@gmail.com"
+    let candidateName = "Sara Díaz Pérez"
+    let candidateEmail = "sdiazper.arq@gmail.com"
     let dateTest = "15 de Julio 2022"
     
     var body: some View {
@@ -22,12 +22,12 @@ struct ContentView: View {
                     .frame(width: 200)
                     .clipShape(Circle())
                 
-                Text("\(name)")
+                Text("\(candidateName)")
                     .font(.title)
                 }
                 
                 VStack(spacing: 8) {
-                    Text("Email: \(email)")
+                    Text("Email: \(candidateEmail)")
                     Text("Fecha prueba: \(dateTest)")
                 }
                 Spacer()

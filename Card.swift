@@ -6,24 +6,30 @@
 //
 
 import SwiftUI
+import Combine
 
 struct Deck: Codable {
     var cards: [Card]
 }
 
 struct Card: Codable, Identifiable {
-    let id: String
+    let id: String?
     let name: String?
     let imageUrl: String?
     let type : String?
     let text: String?
     let rarity: String?
     
+    
+    var wrappedId: String {
+         id ?? UUID().uuidString
+    }
+    
     var wrappedName: String {
         name ?? "Unknown name"
     }
     
-    var wrappedImageURL: String {
+    var wrappedImageUrl: String {
         imageUrl ?? "https://hws.noImage"
     }
    
