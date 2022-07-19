@@ -10,7 +10,9 @@ import SwiftUI
 struct CardsView: View {
     @State private var deck: [Card] = []
     
-    @FetchRequest(sortDescriptors: []) var deckCD: FetchedResults<CachedCard>
+    @FetchRequest(sortDescriptors: [
+        SortDescriptor(\.name)
+    ]) var deckCD: FetchedResults<CachedCard>
     @Environment(\.managedObjectContext) var moc
     
     var body: some View {
@@ -22,8 +24,9 @@ struct CardsView: View {
                     VStack(alignment: .leading) {
                         Text(card.wrappedName)
                             .font(.title3)
-                        Text(card.wrappedRarity)
+                        Text("Rarity: \(card.wrappedRarity)")
                             .font(.subheadline)
+                            .foregroundColor(.secondary)
                     }
                 }
             }
@@ -42,7 +45,6 @@ struct CardsView: View {
                     cached.type = card.type
                     cached.text = card.text
                     cached.rarity = card.rarity
-                    print("Success cached")
                 }
             }
             
