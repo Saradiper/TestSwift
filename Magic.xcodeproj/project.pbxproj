@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		565316BC28901FF100CAEF4D /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 565316BB28901FF100CAEF4D /* CachedAsyncImage */; };
 		56AF726D2884A81E00DFC7CA /* loadImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF726C2884A81E00DFC7CA /* loadImageView.swift */; };
 		56AF727F28867C3600DFC7CA /* MagicModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56AF727D28867C3600DFC7CA /* MagicModel.xcdatamodeld */; };
 		56AF728328867F5400DFC7CA /* CachedCard+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF728128867F5400DFC7CA /* CachedCard+CoreDataClass.swift */; };
@@ -45,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				565316BC28901FF100CAEF4D /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +146,9 @@
 			dependencies = (
 			);
 			name = Magic;
+			packageProductDependencies = (
+				565316BB28901FF100CAEF4D /* CachedAsyncImage */,
+			);
 			productName = Magic;
 			productReference = 56FF08402881CEBF0079F1FF /* Magic.app */;
 			productType = "com.apple.product-type.application";
@@ -172,6 +177,9 @@
 				Base,
 			);
 			mainGroup = 56FF08372881CEBF0079F1FF;
+			packageReferences = (
+				565316BA28901FF100CAEF4D /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
 			productRefGroup = 56FF08412881CEBF0079F1FF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -411,6 +419,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		565316BA28901FF100CAEF4D /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		565316BB28901FF100CAEF4D /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 565316BA28901FF100CAEF4D /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		56AF727D28867C3600DFC7CA /* MagicModel.xcdatamodeld */ = {

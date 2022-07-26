@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import CachedAsyncImage
 
 struct loadImageView: View {
     let card: CachedCard
     
     var body: some View {
-        AsyncImage(url: URL(string: card.wrappedImageUrl)) { phase in
+        CachedAsyncImage(url: URL(string: card.wrappedImageUrl)) { phase in
             if let image = phase.image {
                 image
                     .resizable()
